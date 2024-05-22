@@ -1,0 +1,211 @@
+{
+    "logs": [
+        "New, non-optimizable resource with id 0 of type SceneData",
+        "New resource with id 1 of type Image",
+        "New resource with id 2 of type Image",
+        "New resource with id 3 of type Image",
+        "New resource with id 4 of type Image",
+        "New resource with id 5 of type Image",
+        "New resource with id 6 of type Image",
+        "Resource with id 5 of type Image was reused in range [3, 4], 2 new usage points were added",
+        "Resource with id 1 of type Image was reused in range [4, 5], 2 new usage points were added"
+    ],
+    "nodes": [
+        {
+            "name": "Scene Data Provider"
+        },
+        {
+            "name": "G-Buffer Pass"
+        },
+        {
+            "name": "Ambient Occlusion"
+        },
+        {
+            "name": "Deferred Lighting Pass"
+        },
+        {
+            "name": "Anti-Aliasing"
+        },
+        {
+            "name": "Present"
+        }
+    ],
+    "optimized_resources": [
+        {
+            "id": 0,
+            "type": "SceneData",
+            "usage_points": [
+                {
+                    "location": 0,
+                    "usage": "Write",
+                    "used_as": "Scene Data",
+                    "used_by": "Scene Data Provider"
+                },
+                {
+                    "location": 1,
+                    "usage": "Input",
+                    "used_as": "Scene Data",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 2,
+                    "usage": "Input",
+                    "used_as": "Scene Data",
+                    "used_by": "Ambient Occlusion"
+                },
+                {
+                    "location": 3,
+                    "usage": "Input",
+                    "used_as": "Scene Data",
+                    "used_by": "Deferred Lighting Pass"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Position Buffer",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 2,
+                    "usage": "Input",
+                    "used_as": "Position Buffer",
+                    "used_by": "Ambient Occlusion"
+                },
+                {
+                    "location": 3,
+                    "usage": "Input",
+                    "used_as": "Position Buffer",
+                    "used_by": "Deferred Lighting Pass"
+                },
+                {
+                    "location": 4,
+                    "usage": "Write",
+                    "used_as": "AA Output",
+                    "used_by": "Anti-Aliasing"
+                },
+                {
+                    "location": 5,
+                    "usage": "Input",
+                    "used_as": "Present",
+                    "used_by": "Present"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Normal Buffer",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 2,
+                    "usage": "Input",
+                    "used_as": "Normal Buffer",
+                    "used_by": "Ambient Occlusion"
+                },
+                {
+                    "location": 3,
+                    "usage": "Input",
+                    "used_as": "Normal Buffer",
+                    "used_by": "Deferred Lighting Pass"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Albedo Buffer",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 3,
+                    "usage": "Input",
+                    "used_as": "Albedo Buffer",
+                    "used_by": "Deferred Lighting Pass"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Depth Buffer",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 2,
+                    "usage": "Input",
+                    "used_as": "Depth Buffer",
+                    "used_by": "Ambient Occlusion"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Motion Vectors",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 3,
+                    "usage": "Write",
+                    "used_as": "Output Image",
+                    "used_by": "Deferred Lighting Pass"
+                },
+                {
+                    "location": 4,
+                    "usage": "Input",
+                    "used_as": "AA Input",
+                    "used_by": "Anti-Aliasing"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 2,
+                    "usage": "Write",
+                    "used_as": "AO Buffer",
+                    "used_by": "Ambient Occlusion"
+                },
+                {
+                    "location": 3,
+                    "usage": "Input",
+                    "used_as": "Ambient Occlusion",
+                    "used_by": "Deferred Lighting Pass"
+                }
+            ]
+        }
+    ],
+    "statistics": {
+        "node_count": 6,
+        "non_optimizable": 1,
+        "optimized_count": 7,
+        "reduction": 2,
+        "resource_count": 9,
+        "time_us": 1962
+    }
+}

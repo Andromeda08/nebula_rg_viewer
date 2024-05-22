@@ -30,4 +30,24 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .hover_border {
+    @apply border border-zinc-900 hover:border-zinc-800 transition-colors ease-in-out;
+  }
+}
+
+.color_image {
+  @apply text-blue-300;
+}
+
+.color_scene_data {
+  @apply text-indigo-300;
+}
+
+.use_write {
+  @apply text-amber-300 hover:text-zinc-50 border border-zinc-900 rounded-lg hover:border-amber-300 transition-colors;
+}
+
+.use_read {
+  @apply text-indigo-300 hover:text-zinc-50 border border-zinc-900 rounded-lg hover:border-indigo-300 transition-colors;
 }

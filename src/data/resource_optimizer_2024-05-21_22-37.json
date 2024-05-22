@@ -1,0 +1,107 @@
+{
+    "nodes": [
+        {
+            "name": "Scene Data Provider"
+        },
+        {
+            "name": "G-Buffer Pass"
+        },
+        {
+            "name": "Present"
+        }
+    ],
+    "optimized_resources": [
+        {
+            "id": 0,
+            "type": "SceneData",
+            "usage_points": [
+                {
+                    "location": 0,
+                    "usage": "Write",
+                    "used_as": "Scene Data",
+                    "used_by": "Scene Data Provider"
+                },
+                {
+                    "location": 1,
+                    "usage": "Input",
+                    "used_as": "Scene Data",
+                    "used_by": "G-Buffer Pass"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Position Buffer",
+                    "used_by": "G-Buffer Pass"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Normal Buffer",
+                    "used_by": "G-Buffer Pass"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Albedo Buffer",
+                    "used_by": "G-Buffer Pass"
+                },
+                {
+                    "location": 2,
+                    "usage": "Input",
+                    "used_as": "Present",
+                    "used_by": "Present"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Depth Buffer",
+                    "used_by": "G-Buffer Pass"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "type": "Image",
+            "usage_points": [
+                {
+                    "location": 1,
+                    "usage": "Write",
+                    "used_as": "Motion Vectors",
+                    "used_by": "G-Buffer Pass"
+                }
+            ]
+        }
+    ],
+    "statistics": {
+        "node_count": 3,
+        "non_optimizable": 1,
+        "optimized_count": 6,
+        "reduction": 0,
+        "resource_count": 6,
+        "time_us": 1279
+    }
+}
